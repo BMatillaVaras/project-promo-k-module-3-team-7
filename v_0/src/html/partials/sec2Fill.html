@@ -1,0 +1,77 @@
+<article class="border">
+    <div class="info">
+      <i class="fa fa-keyboard-o info__icons"></i>
+      <h2 class="info__formTitle">Rellena</h2>
+      <i class="fa fa-angle-up info__rotate js__rotate js__fillRotate" title="Despliega RELLENA"></i>
+    </div>
+    <form action="" method="post" class="fill js__display js__displayNone">
+      <label for="fullName" class="fill__label">Nombre completo</label>
+      <input
+        class="fill__input js-fill__input"
+        placeholder="Ej: Barry Allen"
+        id="fullName"
+        type="text"
+        name="fullName"
+        required
+      
+      />
+      <label for="job" class="fill__label">Puesto</label>
+      <input
+        class="fill__input js-fill__input"
+        placeholder="Ej: The fastest man alive"
+        id="job"
+        type="text"
+        name="job"
+        required
+        
+      />
+      <label class="fill__label--img" for="img-selector">Imagen de perfil</label>
+    <div class="fill__wrapper">
+      <div class="action">
+        <button class="action__upload-btn js__profile-trigger" type="button" title="Añadir imagen">Añadir imagen</button>
+        <input type="file" name="img-selector" id="img-selector" accept="image/png, image/jpeg" class="action__hiddenField js__profile-upload-btn">
+      </div>
+      <div class="profile">
+        <div class="profile__preview js__profile-preview" id="previewImg"></div> 
+      </div>
+    </div>
+      <label for="mail" class="fill__label">Email</label>
+      <input
+        class="fill__input js-fill__input"
+        id="mail"
+        type="email"
+        name="emailaddress"
+        placeholder="Ej: barryAllen@gmail.com"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        required
+      />
+      <label for="telephone" class="fill__label">Teléfono</label>
+      <input
+        class="fill__input js-fill__input"
+        id="telephone"
+        type="tel"
+        name="telephone"
+        placeholder="Ej: 555-55-55-55"
+        pattern="[0-9]{9}"
+      />
+      <label for="Linkedin" class="fill__label">Linkedin</label>
+      <input
+        class="fill__input js-fill__input"
+        id="linkedin"
+        type="text"
+        name="Linkedin"
+        placeholder="Ej: linkedin.com/in/barryAllen.hill"
+        required
+      />
+      <label for="Github" class="fill__label">Github</label>
+      <input
+        class="fill__input js-fill__input"
+        id="github"
+        type="text"
+        name="Github"
+        placeholder="Ej: @Barry-Allen"
+        pattern="@[A-Za-z][0-9]{1,}"
+        required
+      />
+      
+    </article>
