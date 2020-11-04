@@ -1,0 +1,10 @@
+@import "../core/variables";
+
+@media all and (min-width: 768px) {
+  .sectionAll {
+    display: flex;
+    padding: 20px 40px 20px 20px;
+    background-image: linear-gradient(#f5f5f5, $colorBrand3 9%);
+    //height: 80vh;
+  }
+}
