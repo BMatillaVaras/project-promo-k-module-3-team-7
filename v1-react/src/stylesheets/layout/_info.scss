@@ -1,0 +1,26 @@
+@import "../core/variables";
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  &__icons {
+    color: $colorBrand4;
+    font-size: 18px;
+  }
+  &__formTitle {
+    font-weight: 600;
+    font-size: 18px;
+    color: $colorBrand2;
+    text-transform: uppercase;
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  &__rotate {
+    font-size: 18px;
+    color: $colorBrand2;
+    transition: all 0.4s ease;
+  }
+}

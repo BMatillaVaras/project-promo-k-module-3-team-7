@@ -1,6 +1,8 @@
 import React from "react";
+import CardIcons from "./CardIcons";
 import CardImg from "../images/Flash.png";
 import "../stylesheets/layout/_mainSectionCard.scss";
+
 
 class MainSectionCard extends React.Component {
   render() {
@@ -36,38 +38,10 @@ class MainSectionCard extends React.Component {
             ></div>
             <nav>
               <ul className="sectionOneCard__nav">
-                <li>
-                  <a href="#" id="js-telephone-card">
-                    <i
-                      className="fa fa-mobile sectionOneCard__nav--logos js-socialLogos"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" id="js-mail-card">
-                    <i
-                      className="fa fa-envelope-o sectionOneCard__nav--logos js-socialLogos"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" id="js-linkedin-card">
-                    <i
-                      className="fa fa-linkedin sectionOneCard__nav--logos js-socialLogos"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" id="js-github-card">
-                    <i
-                      className="fa fa-github-alt sectionOneCard__nav--logos js-socialLogos"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
-                </li>
+                <CardIcons href="" id="js-telephone-card" icon="fa-mobile"></CardIcons>
+                <CardIcons href="" id="js-mail-card" icon="fa-envelope-o"></CardIcons>
+                <CardIcons href="" id="js-linkedin-card" icon="fa-linkedin"></CardIcons>
+                <CardIcons href="" id="js-github-card" icon="fa-github-alt"></CardIcons>
               </ul>
             </nav>
           </div>

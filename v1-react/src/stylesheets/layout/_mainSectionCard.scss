@@ -46,7 +46,7 @@
 }
 .sectionOneCard {
   width: 240px;
-  height: 350px;
+  height: 329px;
   background-color: #ffffff;
   margin: 0 35px 40px 45px;
   padding-top: 1px;
@@ -77,18 +77,7 @@
   &__nav {
     list-style: none;
     display: flex;
-    padding: 15px 0 10px 20px;
-    &--logos {
-      font-size: 18px;
-      color: $colorBrand1;
-      border-radius: 16px;
-      border: solid 2px $colorBrand5;
-      width: 32px;
-      height: 32px;
-      line-height: 29px;
-      text-align: center;
-      margin-right: 10px;
-    }
+    padding: 10px 0 0 20px;
   }
 }
 .img-btn {

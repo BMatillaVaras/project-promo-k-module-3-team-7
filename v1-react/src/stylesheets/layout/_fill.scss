@@ -1,0 +1,86 @@
+@import "../core/variables";
+
+.border {
+  border-bottom: $colorBrand10 solid 1px;
+  margin-bottom: 10px;
+}
+
+//   FORMULARIO
+
+.fill {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: $colorBrand1;
+  transition: all 0.4s ease;
+  &__label {
+    margin-top: 20px;
+    &--img {
+      margin-top: 18px;
+      margin-bottom: 7px;
+    }
+  }
+  &__input {
+    border: 1px solid $colorBrand5;
+    margin-top: 7px;
+    height: 30px;
+    &::placeholder {
+      padding-left: 9px;
+      color: $colorBrand13;
+    }
+  }
+}
+// BOTÓN IMAGEN
+.fill__wrapper {
+  display: flex;
+  align-items: center;
+}
+.action {
+  text-align: center;
+  &__upload-btn {
+    background: $colorBrand4;
+    border-radius: 3px;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    color: $colorBrand3;
+    font-size: 14px;
+    line-height: 1.43;
+    height: 30px;
+    width: 140px;
+    transition-duration: 0.2s;
+    &:hover {
+      background-color: #cf3b09;
+    }
+  }
+  &__hiddenField {
+    display: none;
+  }
+}
+.profile {
+  display: flex;
+  justify-content: center;
+}
+.profile__image,
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+.profile__image {
+  width: 240px;
+  height: 200px;
+}
+
+.profile__preview {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+.eatMe {
+  width: 100px;
+  height: 100px;
+}

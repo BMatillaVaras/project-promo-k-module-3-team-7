@@ -1,0 +1,13 @@
+@import "../core/variables";
+
+.sectionOneCard__nav--logos {
+  font-size: 18px;
+  color: $colorBrand1;
+  border-radius: 16px;
+  border: solid 2px $colorBrand5;
+  width: 32px;
+  height: 32px;
+  line-height: 29px;
+  text-align: center;
+  margin-right: 10px;
+}
