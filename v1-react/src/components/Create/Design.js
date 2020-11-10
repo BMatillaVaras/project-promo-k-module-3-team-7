@@ -3,11 +3,33 @@ import Info from "./Info";
 import "../../stylesheets/layout/_design.scss";
 
 class Design extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      onClick: "close",
+    };
+
+    this.collapseDesign = this.collapseDesign.bind(this);
+  }
+
+  collapseDesign() {
+    this.setState((prevState) => ({
+      onClick: prevState.onClick === "close" ? "open" : "close",
+    }));
+  }
+
   render() {
     return (
       <article className="border">
-        <Info icon="fa-object-ungroup" title="Diseña"></Info>
-        <div className="design js__display js__displayNone js__show">
+        <Info
+          state={this.state.onClick}
+          icon="fa-object-ungroup"
+          title="Diseña"
+          handleClick={this.collapseDesign}
+        ></Info>
+        <div
+          className={`design js__display js__displayNone ${this.state.onClick}`}
+        >
           <h3 className="design__title">Colores</h3>
           <div>
             {/* <!--Checkbox1--> */}

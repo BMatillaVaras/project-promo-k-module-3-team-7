@@ -15,10 +15,10 @@
   display: none;
 }
 
-.js__show {
+.open {
   display: flex;
 }
 
-.js__arrowRotate {
+.open .js__rotate {
   transform: rotate(180deg);
 }

@@ -3,19 +3,42 @@ import Info from "./Info";
 import "../../stylesheets/layout/_share.scss";
 
 class Share extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      onClick: "close",
+    };
+
+    this.collapseShare = this.collapseShare.bind(this);
+  }
+
+  collapseShare() {
+    this.setState((prevState) => ({
+      onClick: prevState.onClick === "close" ? "open" : "close",
+    }));
+  }
   render() {
     return (
       <>
         <article className="border">
-          <Info icon="fa-share-alt" title="Comparte"></Info>
-          <div className="js-section__link--share share js__display js__displayNone js-share js-btn--create">
+          <Info
+            state={this.state.onClick}
+            icon="fa-share-alt"
+            title="Comparte"
+            handleClick={this.collapseShare}
+          ></Info>
+          <div
+            className={`js-section__link--share share js__display js__displayNone js-share js-btn--create ${this.state.onClick}`}
+          >
             <i className="fa fa-address-card-o share__icon"></i>
             <button className="share__button js-share__button" type="button">
               Crear tarjeta
             </button>
           </div>
         </article>
-        <div className="border sent js__displayNone js-link js-twitterContainer js__show">
+        <div
+          className={`border sent js__displayNone js-link js-twitterContainer js__show`}
+        >
           <h3 className="sent__text section__share--subtitle">
             La tarjeta ha sido creada
           </h3>
@@ -29,7 +52,7 @@ class Share extends React.Component {
           </a>
         </div>
       </>
-    )
+    );
   }
 }
 

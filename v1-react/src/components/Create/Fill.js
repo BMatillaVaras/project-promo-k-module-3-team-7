@@ -3,18 +3,38 @@ import Info from "./Info";
 import "../../stylesheets/layout/_fill.scss";
 
 class Fill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      onClick: "close",
+    };
+
+    this.collapseFill = this.collapseFill.bind(this);
+  }
+
+  collapseFill() {
+    this.setState((prevState) => ({
+      onClick: prevState.onClick === "close" ? "open" : "close",
+    }));
+  }
+
   render() {
     return (
       <article className="border">
-        <Info icon="fa-keyboard-o" title="Rellena"></Info>
+        <Info
+          state={this.state.onClick}
+          icon="fa-keyboard-o"
+          title="Rellena"
+          handleClick={this.collapseFill}
+        ></Info>
         <form
           action=""
           method="post"
-          className="fill js__display js__displayNone js__show"
+          className={`fill js__display js__displayNone ${this.state.onClick}`}
         >
           <label htmlFor="fullName" className="fill__label">
             Nombre completo
-            </label>
+          </label>
           <input
             className="fill__input js-fill__input"
             placeholder="Ej: Barry Allen"
@@ -25,7 +45,7 @@ class Fill extends React.Component {
           />
           <label htmlFor="job" className="fill__label">
             Puesto
-            </label>
+          </label>
           <input
             className="fill__input js-fill__input"
             placeholder="Ej: The fastest man alive"
@@ -36,7 +56,7 @@ class Fill extends React.Component {
           />
           <label className="fill__label--img" htmlFor="img-selector">
             Imagen de perfil
-            </label>
+          </label>
           <div className="fill__wrapper">
             <div className="action">
               <button
@@ -45,7 +65,7 @@ class Fill extends React.Component {
                 title="Añadir imagen"
               >
                 Añadir imagen
-                </button>
+              </button>
               <input
                 type="file"
                 name="img-selector"
@@ -63,7 +83,7 @@ class Fill extends React.Component {
           </div>
           <label htmlFor="mail" className="fill__label">
             Email
-            </label>
+          </label>
           <input
             className="fill__input js-fill__input"
             id="mail"
@@ -75,7 +95,7 @@ class Fill extends React.Component {
           />
           <label htmlFor="telephone" className="fill__label">
             Teléfono
-            </label>
+          </label>
           <input
             className="fill__input js-fill__input"
             id="telephone"
@@ -86,7 +106,7 @@ class Fill extends React.Component {
           />
           <label htmlFor="Linkedin" className="fill__label">
             Linkedin
-            </label>
+          </label>
           <input
             className="fill__input js-fill__input"
             id="linkedin"
@@ -97,7 +117,7 @@ class Fill extends React.Component {
           />
           <label htmlFor="Github" className="fill__label">
             Github
-            </label>
+          </label>
           <input
             className="fill__input js-fill__input"
             id="github"
@@ -108,8 +128,8 @@ class Fill extends React.Component {
             required
           />
         </form>
-      </article >
-    )
+      </article>
+    );
   }
 }
 
