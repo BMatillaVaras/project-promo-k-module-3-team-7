@@ -7,14 +7,22 @@ class Share extends React.Component {
     super(props);
     this.state = {
       onClick: "close",
+      createCard: "close",
     };
 
     this.collapseShare = this.collapseShare.bind(this);
+    this.createCard = this.createCard.bind(this);
   }
 
   collapseShare() {
     this.setState((prevState) => ({
       onClick: prevState.onClick === "close" ? "open" : "close",
+    }));
+  }
+
+  createCard() {
+    this.setState((prevState) => ({
+      createCard: prevState.createCard === "close" ? "open" : "close",
     }));
   }
   render() {
@@ -31,13 +39,17 @@ class Share extends React.Component {
             className={`js-section__link--share share js__display js__displayNone js-share js-btn--create ${this.state.onClick}`}
           >
             <i className="fa fa-address-card-o share__icon"></i>
-            <button className="share__button js-share__button" type="button">
+            <button
+              className="share__button js-share__button"
+              type="button"
+              onClick={this.createCard}
+            >
               Crear tarjeta
             </button>
           </div>
         </article>
         <div
-          className={`border sent js__displayNone js-link js-twitterContainer js__show`}
+          className={`border sent js__displayNone js-link js-twitterContainer ${this.state.createCard}`}
         >
           <h3 className="sent__text section__share--subtitle">
             La tarjeta ha sido creada

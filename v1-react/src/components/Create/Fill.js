@@ -1,5 +1,6 @@
 import React from "react";
 import Info from "./Info";
+import FormItem from "./FormItem";
 import "../../stylesheets/layout/_fill.scss";
 
 class Fill extends React.Component {
@@ -32,28 +33,18 @@ class Fill extends React.Component {
           method="post"
           className={`fill js__display js__displayNone ${this.state.onClick}`}
         >
-          <label htmlFor="fullName" className="fill__label">
-            Nombre completo
-          </label>
-          <input
-            className="fill__input js-fill__input"
-            placeholder="Ej: Barry Allen"
-            id="fullName"
-            type="text"
+          <FormItem
             name="fullName"
-            required
-          />
-          <label htmlFor="job" className="fill__label">
-            Puesto
-          </label>
-          <input
-            className="fill__input js-fill__input"
-            placeholder="Ej: The fastest man alive"
-            id="job"
+            title="Nombre completo"
+            placeholder="Ej: Barry Allen"
             type="text"
+          ></FormItem>
+          <FormItem
             name="job"
-            required
-          />
+            title="Puesto"
+            placeholder="Ej: The fastest man alive"
+            type="text"
+          ></FormItem>
           <label className="fill__label--img" htmlFor="img-selector">
             Imagen de perfil
           </label>
@@ -81,52 +72,33 @@ class Fill extends React.Component {
               ></div>
             </div>
           </div>
-          <label htmlFor="mail" className="fill__label">
-            Email
-          </label>
-          <input
-            className="fill__input js-fill__input"
-            id="mail"
-            type="email"
-            name="emailaddress"
+          <FormItem
+            name="mail"
+            title="Email"
             placeholder="Ej: barryAllen@gmail.com"
+            type="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            required
-          />
-          <label htmlFor="telephone" className="fill__label">
-            Teléfono
-          </label>
-          <input
-            className="fill__input js-fill__input"
-            id="telephone"
-            type="tel"
+          ></FormItem>
+          <FormItem
             name="telephone"
+            title="Teléfono"
             placeholder="Ej: 555-55-55-55"
+            type="tel"
             pattern="[0-9]{9}"
-          />
-          <label htmlFor="Linkedin" className="fill__label">
-            Linkedin
-          </label>
-          <input
-            className="fill__input js-fill__input"
-            id="linkedin"
-            type="text"
+          ></FormItem>
+          <FormItem
             name="Linkedin"
+            title="Linkedin"
             placeholder="Ej: linkedin.com/in/barryAllen.hill"
-            required
-          />
-          <label htmlFor="Github" className="fill__label">
-            Github
-          </label>
-          <input
-            className="fill__input js-fill__input"
-            id="github"
             type="text"
+          ></FormItem>
+          <FormItem
             name="Github"
+            title="Github"
             placeholder="Ej: @Barry-Allen"
+            type="text"
             pattern="@[A-Za-z][0-9]{1,}"
-            required
-          />
+          ></FormItem>
         </form>
       </article>
     );
