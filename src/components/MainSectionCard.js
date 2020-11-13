@@ -9,6 +9,7 @@ class MainSectionCard extends React.Component {
       backgroundImage: "url(" + CardImg + ")",
     };
 
+    // INTENTO DE HACER UN FOR PARA NO REPETIR EL TERNARIO DE ABAJO PARA TRAER CADA PROPS
     // for (const key in this.props.state) {
     //   if (this.props.state.key === "") {
     //     const element = object[key];
