@@ -1,5 +1,6 @@
 import React from "react";
 import Info from "./Info";
+import Palettes from "./Palettes";
 import "../../stylesheets/layout/_design.scss";
 
 class Design extends React.Component {
@@ -33,44 +34,34 @@ class Design extends React.Component {
           <h3 className="design__title">Colores</h3>
           <div>
             {/* <!--Checkbox1--> */}
-            <div className="design__colors js-design__colors blue">
-              <input
-                className="design__colors--check js-checkedBlue"
-                id="method1"
-                type="radio"
-                value="colors"
-                name="methods"
-              />
-              <div className="design__colors--box box1"></div>
-              <div className="design__colors--box box2"></div>
-              <div className="design__colors--box box3"></div>
-            </div>
+            <Palettes
+              divClass="blue"
+              inputClass="js-checkedBlue"
+              id="method1"
+              classColor1="box1"
+              classColor2="box2"
+              classColor3="box3"
+            />
+
             {/* <!--Checkbox2--> */}
-            <div className="design__colors js-design__colors red">
-              <input
-                className="design__colors--check js-checkedRed"
-                id="method2"
-                type="radio"
-                value="colors"
-                name="methods"
-              />
-              <div className="design__colors--box box4"></div>
-              <div className="design__colors--box box5"></div>
-              <div className="design__colors--box box6"></div>
-            </div>
+            <Palettes
+              divClass="red"
+              inputClass="js-checkedRed"
+              id="method2"
+              classColor1="box4"
+              classColor2="box5"
+              classColor3="box6"
+            />
+
             {/* <!--Checkbox3--> */}
-            <div className="design__colors js-design__colors grey">
-              <input
-                className="design__colors--check js-checkedGrey"
-                id="method3"
-                type="radio"
-                value="colors"
-                name="methods"
-              />
-              <div className="design__colors--box box7"></div>
-              <div className="design__colors--box box8"></div>
-              <div className="design__colors--box box9"></div>
-            </div>
+            <Palettes
+              divClass="grey"
+              inputClass="js-checkedGrey"
+              id="method3"
+              classColor1="box7"
+              classColor2="box8"
+              classColor3="box9"
+            />
           </div>
         </div>
       </article>

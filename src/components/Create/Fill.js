@@ -73,28 +73,28 @@ class Fill extends React.Component {
             </div>
           </div>
           <FormItem
-            name="mail"
-            title="Email"
+            name="email"
+            title="email"
             placeholder="Ej: barryAllen@gmail.com"
             type="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           ></FormItem>
           <FormItem
             name="telephone"
-            title="Teléfono"
+            title="telephone"
             placeholder="Ej: 555-55-55-55"
             type="tel"
             pattern="[0-9]{9}"
           ></FormItem>
           <FormItem
-            name="Linkedin"
-            title="Linkedin"
+            name="linkedin"
+            title="linkedin"
             placeholder="Ej: linkedin.com/in/barryAllen.hill"
             type="text"
           ></FormItem>
           <FormItem
-            name="Github"
-            title="Github"
+            name="github"
+            title="github"
             placeholder="Ej: @Barry-Allen"
             type="text"
             pattern="@[A-Za-z][0-9]{1,}"

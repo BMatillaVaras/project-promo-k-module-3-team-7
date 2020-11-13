@@ -14,6 +14,7 @@ class FormItem extends React.Component {
           type={this.props.type}
           name={this.props.name}
           pattern={this.props.pattern}
+          // onChange={this.}
           required
         />
       </>

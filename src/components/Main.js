@@ -7,8 +7,8 @@ class Main extends React.Component {
   render() {
     return (
       <main className="sectionAll">
-        <MainSectionCard />
-        <MainSectionCreate />
+        <MainSectionCard state={this.props.state} />
+        <MainSectionCreate state={this.props.state} />
       </main>
     );
   }

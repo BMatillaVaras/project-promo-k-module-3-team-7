@@ -7,12 +7,23 @@ import "../stylesheets/App.scss";
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      palette: "",
+      fullName: "",
+      job: "",
+      email: "",
+      telephone: "",
+      linkedin: "",
+      github: "",
+      img: "",
+    };
   }
   render() {
     return (
       <>
         <Header />
-        <Main />
+        <Main state={this.state} />
         <Footer />
       </>
     );
