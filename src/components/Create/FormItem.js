@@ -1,6 +1,15 @@
 import React from "react";
 
 class FormItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange = (ev) => {
+    console.log("me han clicado", ev.target.value);
+    this.props.handleInputChange(ev.target.name, ev.target.value);
+  };
+
   render() {
     return (
       <>
@@ -14,7 +23,8 @@ class FormItem extends React.Component {
           type={this.props.type}
           name={this.props.name}
           pattern={this.props.pattern}
-          // onChange={this.}
+          value={this.props.value}
+          onChange={this.handleChange}
           required
         />
       </>

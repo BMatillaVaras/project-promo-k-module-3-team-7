@@ -8,7 +8,7 @@ class Main extends React.Component {
     return (
       <main className="sectionAll">
         <MainSectionCard state={this.props.state} />
-        <MainSectionCreate state={this.props.state} />
+        <MainSectionCreate handleInputChange={this.props.handleInputChange} state={this.props.state} />
       </main>
     );
   }

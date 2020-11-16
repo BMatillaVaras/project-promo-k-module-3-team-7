@@ -9,7 +9,7 @@ class MainSectionCreate extends React.Component {
     return (
       <section className="colapsableForm">
         <Design></Design>
-        <Fill></Fill>
+        <Fill handleInputChange={this.props.handleInputChange} state={this.props.state}></Fill>
         <Share></Share>
       </section>
     );

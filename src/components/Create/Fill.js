@@ -22,39 +22,30 @@ class Fill extends React.Component {
   render() {
     return (
       <article className="border">
-        <Info
-          state={this.state.onClick}
-          icon="fa-keyboard-o"
-          title="Rellena"
-          handleClick={this.collapseFill}
-        ></Info>
-        <form
-          action=""
-          method="post"
-          className={`fill js__display js__displayNone ${this.state.onClick}`}
-        >
+        <Info state={this.state.onClick} icon="fa-keyboard-o" title="Rellena" handleClick={this.collapseFill}></Info>
+        <form action="" method="post" className={`fill js__display js__displayNone ${this.state.onClick}`}>
           <FormItem
             name="fullName"
             title="Nombre completo"
             placeholder="Ej: Barry Allen"
             type="text"
+            value={this.props.state.fullName}
+            handleInputChange={this.props.handleInputChange}
           ></FormItem>
           <FormItem
             name="job"
             title="Puesto"
             placeholder="Ej: The fastest man alive"
             type="text"
+            value={this.props.state.job}
+            handleInputChange={this.props.handleInputChange}
           ></FormItem>
           <label className="fill__label--img" htmlFor="img-selector">
             Imagen de perfil
           </label>
           <div className="fill__wrapper">
             <div className="action">
-              <button
-                className="action__upload-btn js__profile-trigger"
-                type="button"
-                title="Añadir imagen"
-              >
+              <button className="action__upload-btn js__profile-trigger" type="button" title="Añadir imagen">
                 Añadir imagen
               </button>
               <input
@@ -66,10 +57,7 @@ class Fill extends React.Component {
               />
             </div>
             <div className="profile">
-              <div
-                className="profile__preview js__profile-preview"
-                id="previewImg"
-              ></div>
+              <div className="profile__preview js__profile-preview" id="previewImg"></div>
             </div>
           </div>
           <FormItem
@@ -78,6 +66,8 @@ class Fill extends React.Component {
             placeholder="Ej: barryAllen@gmail.com"
             type="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            value={this.props.state.email}
+            handleInputChange={this.props.handleInputChange}
           ></FormItem>
           <FormItem
             name="telephone"
@@ -85,19 +75,25 @@ class Fill extends React.Component {
             placeholder="Ej: 555-55-55-55"
             type="tel"
             pattern="[0-9]{9}"
+            value={this.props.state.telephone}
+            handleInputChange={this.props.handleInputChange}
           ></FormItem>
           <FormItem
             name="linkedin"
             title="linkedin"
-            placeholder="Ej: linkedin.com/in/barryAllen.hill"
+            placeholder="Ej: barryAllen"
             type="text"
+            value={this.props.state.linkedin}
+            handleInputChange={this.props.handleInputChange}
           ></FormItem>
           <FormItem
             name="github"
             title="github"
-            placeholder="Ej: @Barry-Allen"
+            placeholder="Ej: Barry-Allen"
             type="text"
             pattern="@[A-Za-z][0-9]{1,}"
+            value={this.props.state.github}
+            handleInputChange={this.props.handleInputChange}
           ></FormItem>
         </form>
       </article>

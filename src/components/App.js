@@ -18,12 +18,21 @@ class App extends React.Component {
       github: "",
       img: "",
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
+
+  handleInputChange = (name, value) => {
+    console.log("name, value", name, value);
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     return (
       <>
         <Header />
-        <Main state={this.state} />
+        <Main handleInputChange={this.handleInputChange} state={this.state} />
         <Footer />
       </>
     );
