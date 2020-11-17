@@ -37,30 +37,33 @@ class Design extends React.Component {
             <Palettes
               divClass="blue"
               inputClass="js-checkedBlue"
-              id="method1"
+              id="paletteBlue"
               classColor1="box1"
               classColor2="box2"
               classColor3="box3"
+              handleInputChange={this.props.handleInputChange}
             />
 
             {/* <!--Checkbox2--> */}
             <Palettes
               divClass="red"
               inputClass="js-checkedRed"
-              id="method2"
+              id="paletteRed"
               classColor1="box4"
               classColor2="box5"
               classColor3="box6"
+              handleInputChange={this.props.handleInputChange}
             />
 
             {/* <!--Checkbox3--> */}
             <Palettes
               divClass="grey"
               inputClass="js-checkedGrey"
-              id="method3"
+              id="paletteGrey"
               classColor1="box7"
               classColor2="box8"
               classColor3="box9"
+              handleInputChange={this.props.handleInputChange}
             />
           </div>
         </div>

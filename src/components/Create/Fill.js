@@ -2,6 +2,7 @@ import React from "react";
 import Info from "./Info";
 import FormItem from "./FormItem";
 import "../../stylesheets/layout/_fill.scss";
+import PropTypes from 'prop-types';
 
 class Fill extends React.Component {
   constructor(props) {
@@ -101,4 +102,8 @@ class Fill extends React.Component {
   }
 }
 
+Fill.propTypes = {
+  state: PropTypes.object.isRequired,
+  handleInputChange: PropTypes.func.isRequired
+}
 export default Fill;

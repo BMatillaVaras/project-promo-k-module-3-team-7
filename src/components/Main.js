@@ -2,6 +2,7 @@ import React from "react";
 import MainSectionCard from "./MainSectionCard";
 import MainSectionCreate from "./MainSectionCreate";
 import "../stylesheets/layout/_main.scss";
+import PropTypes from 'prop-types';
 
 class Main extends React.Component {
   render() {
@@ -14,4 +15,8 @@ class Main extends React.Component {
   }
 }
 
+Main.propTypes = {
+  state: PropTypes.object.isRequired,
+  handleInputChange: PropTypes.func.isRequired
+}
 export default Main;

@@ -1,6 +1,15 @@
 import React from "react";
 
 class Palettes extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange = (ev) => {
+    console.log("me han clicado", ev.target.value);
+    this.props.handleInputChange(ev.target.name, ev.target.value);
+  }
+
   render() {
     return (
       <div
@@ -10,8 +19,9 @@ class Palettes extends React.Component {
           className={`design__colors--check ${this.props.inputClass}`}
           id={this.props.id}
           type="radio"
-          value="colors"
-          name="methods"
+          value={this.props.id}
+          name="palette"
+          onChange={this.handleChange}
         />
         <div className={`design__colors--box ${this.props.classColor1}`}></div>
         <div className={`design__colors--box ${this.props.classColor2}`}></div>

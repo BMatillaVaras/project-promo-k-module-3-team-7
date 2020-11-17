@@ -2,6 +2,7 @@ import React from "react";
 import CardIcons from "./CardIcons";
 import CardImg from "../images/Flash.png";
 import "../stylesheets/layout/_mainSectionCard.scss";
+import PropTypes from 'prop-types';
 
 class MainSectionCard extends React.Component {
   render() {
@@ -33,7 +34,11 @@ class MainSectionCard extends React.Component {
                   id="js-telephone-card"
                   icon="fa-mobile"
                 ></CardIcons>
-                <CardIcons href={`mailto:${this.props.state.email}`} id="js-mail-card" icon="fa-envelope-o"></CardIcons>
+                <CardIcons
+                  href={`mailto:${this.props.state.email}`}
+                  id="js-mail-card"
+                  icon="fa-envelope-o">
+                </CardIcons>
                 <CardIcons
                   href={`https://www.linkedin.com/in/${this.props.state.linkedin}`}
                   id="js-linkedin-card"
@@ -53,4 +58,7 @@ class MainSectionCard extends React.Component {
   }
 }
 
+MainSectionCard.propTypes = {
+  state: PropTypes.object.isRequired
+}
 export default MainSectionCard;

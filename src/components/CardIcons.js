@@ -1,11 +1,12 @@
 import React from "react";
 import "../stylesheets/layout/_cardIcons.scss";
+import PropTypes from 'prop-types';
 
-class MainSectionCard extends React.Component {
+class CardIcons extends React.Component {
   render() {
     return (
       <li>
-        <a href={this.props.href} id={this.props.id}>
+        <a href={this.props.href} id={this.props.id} target="_blank">
           <i
             className={`fa ${this.props.icon} sectionOneCard__nav--logos js-socialLogos`}
             aria-hidden="true"
@@ -16,4 +17,9 @@ class MainSectionCard extends React.Component {
   }
 }
 
-export default MainSectionCard;
+CardIcons.propTypes = {
+  href: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+}
+export default CardIcons;
