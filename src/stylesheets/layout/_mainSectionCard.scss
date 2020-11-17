@@ -86,3 +86,47 @@
   height: 20px;
   margin-top: 2px;
 }
+
+//PALETTE BLUE
+
+.paletteBlue {
+  & .js__name--Card {
+    color: $colorBrand1;
+  }
+  & .js-border {
+    border-color: $colorBrand6;
+  }
+  & .js-socialLogos {
+    border-color: $colorBrand5;
+    color: $colorBrand1;
+  }
+}
+
+//PALETTE RED
+.paletteRed {
+  & .js__name--Card {
+    color: $dried-blood;
+  }
+  & .js-border {
+    border-color: $rusty-red;
+  }
+  & .js-socialLogos {
+    border-color: $tomato;
+    color: $dried-blood;
+  }
+}
+
+//PALETTE GREY
+
+.paletteGrey {
+  & .js__name--Card {
+    color: $slate;
+  }
+  & .js-border {
+    border-color: $faded-orange;
+  }
+  & .js-socialLogos {
+    border-color: $light-grey-blue;
+    color: $slate;
+  }
+}

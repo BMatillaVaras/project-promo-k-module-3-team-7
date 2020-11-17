@@ -2,7 +2,7 @@ import React from "react";
 import Info from "./Info";
 import FormItem from "./FormItem";
 import "../../stylesheets/layout/_fill.scss";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class Fill extends React.Component {
   constructor(props) {
@@ -23,8 +23,17 @@ class Fill extends React.Component {
   render() {
     return (
       <article className="border">
-        <Info state={this.state.onClick} icon="fa-keyboard-o" title="Rellena" handleClick={this.collapseFill}></Info>
-        <form action="" method="post" className={`fill js__display js__displayNone ${this.state.onClick}`}>
+        <Info
+          state={this.state.onClick}
+          icon="fa-keyboard-o"
+          title="Rellena"
+          handleClick={this.collapseFill}
+        ></Info>
+        <form
+          action=""
+          method="post"
+          className={`fill js__display js__displayNone ${this.state.onClick}`}
+        >
           <FormItem
             name="fullName"
             title="Nombre completo"
@@ -46,7 +55,11 @@ class Fill extends React.Component {
           </label>
           <div className="fill__wrapper">
             <div className="action">
-              <button className="action__upload-btn js__profile-trigger" type="button" title="Añadir imagen">
+              <button
+                className="action__upload-btn js__profile-trigger"
+                type="button"
+                title="Añadir imagen"
+              >
                 Añadir imagen
               </button>
               <input
@@ -58,7 +71,10 @@ class Fill extends React.Component {
               />
             </div>
             <div className="profile">
-              <div className="profile__preview js__profile-preview" id="previewImg"></div>
+              <div
+                className="profile__preview js__profile-preview"
+                id="previewImg"
+              ></div>
             </div>
           </div>
           <FormItem
@@ -104,6 +120,6 @@ class Fill extends React.Component {
 
 Fill.propTypes = {
   state: PropTypes.object.isRequired,
-  handleInputChange: PropTypes.func.isRequired
-}
+  handleInputChange: PropTypes.func.isRequired,
+};
 export default Fill;

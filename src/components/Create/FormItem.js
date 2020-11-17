@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class FormItem extends React.Component {
   constructor(props) {
@@ -32,4 +33,13 @@ class FormItem extends React.Component {
   }
 }
 
+FormItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  pattern: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+};
 export default FormItem;

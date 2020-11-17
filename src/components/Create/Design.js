@@ -2,6 +2,7 @@ import React from "react";
 import Info from "./Info";
 import Palettes from "./Palettes";
 import "../../stylesheets/layout/_design.scss";
+import PropTypes from "prop-types";
 
 class Design extends React.Component {
   constructor(props) {
@@ -72,4 +73,7 @@ class Design extends React.Component {
   }
 }
 
+Design.propTypes = {
+  handleInputChange: PropTypes.func.isRequired,
+};
 export default Design;

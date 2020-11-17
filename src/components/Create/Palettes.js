@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Palettes extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Palettes extends React.Component {
   handleChange = (ev) => {
     console.log("me han clicado", ev.target.value);
     this.props.handleInputChange(ev.target.name, ev.target.value);
-  }
+  };
 
   render() {
     return (
@@ -31,4 +32,13 @@ class Palettes extends React.Component {
   }
 }
 
+Palettes.propTypes = {
+  divClass: PropTypes.string.isRequired,
+  inputClass: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  classColor1: PropTypes.string.isRequired,
+  classColor2: PropTypes.string.isRequired,
+  classColor3: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+};
 export default Palettes;
