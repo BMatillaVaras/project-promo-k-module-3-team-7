@@ -46,10 +46,11 @@
 }
 .sectionOneCard {
   width: 240px;
-  height: 329px;
+  // height: 329px;
   background-color: #ffffff;
   margin: 0 35px 40px 45px;
   padding-top: 1px;
+  padding-bottom: 10px;
   &__header {
     border-left: 5px solid #438792;
     &--name {
