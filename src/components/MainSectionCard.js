@@ -6,9 +6,6 @@ import PropTypes from "prop-types";
 
 class MainSectionCard extends React.Component {
   render() {
-    const imgStyle = {
-      backgroundImage: "url(" + CardImg + ")",
-    };
     return (
       <section className="sectionOne">
         <div>
@@ -34,7 +31,9 @@ class MainSectionCard extends React.Component {
             <div
               className="profile__image js__profile-image"
               id="profileImg"
-              style={imgStyle}
+              style={{
+                backgroundImage: `url(${this.props.state.img || CardImg})`,
+              }}
             ></div>
             <nav>
               <ul className="sectionOneCard__nav">

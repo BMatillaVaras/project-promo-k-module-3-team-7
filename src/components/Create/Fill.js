@@ -1,6 +1,7 @@
 import React from "react";
 import Info from "./Info";
 import FormItem from "./FormItem";
+import CardImage from "./CardImage";
 import "../../stylesheets/layout/_fill.scss";
 import PropTypes from "prop-types";
 
@@ -50,33 +51,10 @@ class Fill extends React.Component {
             value={this.props.state.job}
             handleInputChange={this.props.handleInputChange}
           ></FormItem>
-          <label className="fill__label--img" htmlFor="img-selector">
-            Imagen de perfil
-          </label>
-          <div className="fill__wrapper">
-            <div className="action">
-              <button
-                className="action__upload-btn js__profile-trigger"
-                type="button"
-                title="Añadir imagen"
-              >
-                Añadir imagen
-              </button>
-              <input
-                type="file"
-                name="img-selector"
-                id="img-selector"
-                accept="image/png, image/jpeg"
-                className="action__hiddenField js__profile-upload-btn"
-              />
-            </div>
-            <div className="profile">
-              <div
-                className="profile__preview js__profile-preview"
-                id="previewImg"
-              ></div>
-            </div>
-          </div>
+          <CardImage
+            handleInputChange={this.props.handleInputChange}
+            img={this.props.state.img}
+          />
           <FormItem
             name="email"
             title="email"

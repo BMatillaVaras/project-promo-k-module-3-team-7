@@ -38,7 +38,7 @@ FormItem.propTypes = {
   title: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  pattern: PropTypes.string.isRequired,
+  pattern: PropTypes.string,
   value: PropTypes.string.isRequired,
   handleInputChange: PropTypes.func.isRequired,
 };
