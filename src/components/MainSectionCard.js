@@ -9,7 +9,10 @@ class MainSectionCard extends React.Component {
     return (
       <section className="sectionOne">
         <div>
-          <button className="sectionOneBtn js-sectionOneBtn">
+          <button
+            className="sectionOneBtn js-sectionOneBtn"
+            onClick={this.props.handleReset}
+          >
             <i
               className="fa fa-trash-o sectionOneBtn__logo"
               aria-hidden="true"

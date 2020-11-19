@@ -1,0 +1,98 @@
+@import "../core/variables";
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.landing__logo {
+  width: 250px;
+  margin-top: 95px;
+  @media all and (min-width: 768px) {
+    margin-top: 330px;
+  }
+}
+.landing__title {
+  font-family: $fontTitle;
+  font-size: 19.2px;
+  color: $colorBrand4;
+  margin-top: 35.4px;
+}
+.landing__subtitle {
+  font-size: 12.8px;
+  color: #114e4e;
+  margin: 0 28px 0 28px;
+}
+.landing__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 268px;
+  height: 73.8px;
+  margin-top: 17.8px;
+  border: $colorBrand4 solid 1.6px;
+  color: $colorBrand4;
+  list-style: none;
+  font-size: 22.4px;
+}
+.landing__list--title {
+  color: $colorBrand2;
+  font-size: 12.8px;
+}
+.landing__button {
+  background-color: #438792;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 38.6px;
+  border-radius: 21px;
+  width: 129px;
+  height: 42px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition-duration: 0.2s;
+  &:hover {
+    background-color: $colorBrand1;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .landing__logo {
+    width: 419px;
+  }
+  .landing__title {
+    font-size: 24px;
+    margin-top: 31px;
+  }
+  .landing__subtitle {
+    font-size: 16px;
+    margin: 0 218px 0 218px;
+  }
+  .landing__list {
+    width: 325px;
+    height: 86px;
+    margin-top: 27px;
+    border: $colorBrand4 solid 2px;
+    font-size: 28px;
+  }
+  .landing__list--title {
+    font-size: 16px;
+  }
+  .landing__button {
+    margin-top: 186px;
+    line-height: 42px;
+    margin-bottom: 59px;
+    transition-duration: 0.2s;
+    &:hover {
+      background-color: $colorBrand1;
+    }
+  }
+}
