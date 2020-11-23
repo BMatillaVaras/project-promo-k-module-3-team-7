@@ -25,7 +25,7 @@ class Landing extends React.Component {
                 <h4 className="landing__list--title">Rellena</h4>
               </li>
               <li>
-                <i className="fa fa-share-alt"></i>{" "}
+                <i className="fa fa-share-alt"></i>
                 <h4 className="landing__list--title">Comparte</h4>
               </li>
             </ul>
