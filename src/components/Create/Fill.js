@@ -57,7 +57,7 @@ class Fill extends React.Component {
           />
           <FormItem
             name="email"
-            title="email"
+            title="E-mail"
             placeholder="Ej: barryAllen@gmail.com"
             type="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -66,7 +66,7 @@ class Fill extends React.Component {
           ></FormItem>
           <FormItem
             name="telephone"
-            title="telephone"
+            title="Teléfono"
             placeholder="Ej: 555-55-55-55"
             type="tel"
             pattern="[0-9]{9}"
@@ -75,7 +75,7 @@ class Fill extends React.Component {
           ></FormItem>
           <FormItem
             name="linkedin"
-            title="linkedin"
+            title="LinkedIn"
             placeholder="Ej: barryAllen"
             type="text"
             value={this.props.state.linkedin}
@@ -83,7 +83,7 @@ class Fill extends React.Component {
           ></FormItem>
           <FormItem
             name="github"
-            title="github"
+            title="GitHub"
             placeholder="Ej: Barry-Allen"
             type="text"
             pattern="@[A-Za-z][0-9]{1,}"

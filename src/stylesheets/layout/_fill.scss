@@ -26,8 +26,8 @@
     border: 1px solid $colorBrand5;
     margin-top: 7px;
     height: 30px;
+    padding-left: 6px;
     &::placeholder {
-      padding-left: 9px;
       color: $colorBrand13;
     }
   }
