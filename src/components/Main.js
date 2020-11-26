@@ -15,6 +15,7 @@ class Main extends React.Component {
         <MainSectionCreate
           handleInputChange={this.props.handleInputChange}
           state={this.props.state}
+          sendRequest={this.props.sendRequest}
         />
       </main>
     );

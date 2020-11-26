@@ -11,7 +11,7 @@ class Share extends React.Component {
     };
 
     this.collapseShare = this.collapseShare.bind(this);
-    this.createCard = this.createCard.bind(this);
+    //this.createCard = this.createCard.bind(this);
   }
 
   collapseShare() {
@@ -20,12 +20,16 @@ class Share extends React.Component {
     }));
   }
 
-  createCard() {
-    this.setState((prevState) => ({
-      createCard: prevState.createCard === "close" ? "open" : "close",
-    }));
-  }
+  // createCard() {
+  //   this.props.sendRequest();
+  //   this.setState((prevState) => ({
+  //     createCard: prevState.createCard === "close" ? "open" : "close",
+  //   }));
+  // }
+
   render() {
+    const tweet =
+      "Ya tengo mi tarjeta creada en STAR Labs, soy miembro de La Liga de la Justicia";
     return (
       <>
         <article className="border">
@@ -42,7 +46,7 @@ class Share extends React.Component {
             <button
               className="share__button js-share__button"
               type="button"
-              onClick={this.createCard}
+              onClick={this.props.sendRequest}
             >
               Crear tarjeta
             </button>
@@ -54,8 +58,21 @@ class Share extends React.Component {
           <h3 className="sent__text section__share--subtitle">
             La tarjeta ha sido creada
           </h3>
-          <a className="sent__link link--share" href="" target="_blank"></a>
-          <a href="" className="sent__twitter button--share" target="_blank">
+          <a
+            className="sent__link link--share"
+            href={this.props.state.apiCardUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {this.props.state.apiSuccess
+              ? this.props.data.apiCardUrl
+              : this.props.state.apiError}
+          </a>
+          <a
+            href={`https://twitter.com/intent/tweet?text=${tweet}&url=${this.props.state.apiCardUrl}`}
+            className="sent__twitter button--share"
+            target="_blank"
+          >
             <i
               className="fa fa-twitter sent__twitter--icon"
               aria-hidden="true"
