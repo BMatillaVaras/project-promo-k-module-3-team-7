@@ -7,7 +7,6 @@ class FormItem extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange = (ev) => {
-    console.log("me han clicado", ev.target.value);
     this.props.handleInputChange(ev.target.name, ev.target.value);
   };
 

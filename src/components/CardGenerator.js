@@ -20,10 +20,11 @@ class CardGenerator extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
 
     this.handleReset = this.handleReset.bind(this);
+    this.setLocalStorage = this.setLocalStorage.bind(this);
+    this.getLocalStorage = this.getLocalStorage.bind(this);
   }
 
   handleInputChange = (name, value) => {
-    console.log("name, value", name, value);
     this.setState({
       [name]: value,
     });
@@ -41,6 +42,35 @@ class CardGenerator extends React.Component {
       img: "",
     });
   };
+
+  componentDidMount() {
+    this.getLocalStorage();
+    console.log("hola");
+  }
+  componentDidUpdate() {
+    this.setLocalStorage();
+  }
+
+  setLocalStorage() {
+    const data = JSON.stringify(this.state);
+    localStorage.setItem("cardData", data);
+  }
+
+  getLocalStorage() {
+    const savedData = JSON.parse(localStorage.getItem("cardData"));
+    if (savedData !== null) {
+      this.setState({
+        palette: savedData.palette,
+        fullName: savedData.fullName,
+        job: savedData.job,
+        email: savedData.email,
+        telephone: savedData.telephone,
+        linkedin: savedData.linkedin,
+        github: savedData.github,
+        img: savedData.img,
+      });
+    }
+  }
 
   render() {
     return (
