@@ -34,7 +34,7 @@ class CardImage extends React.Component {
         <div className="fill__wrapper">
           <div className="action">
             <button
-              className="action__upload-btn js__profile-trigger"
+              className="action__upload-btn"
               type="button"
               title="Añadir imagen"
               onClick={this.fakeClick}
@@ -46,14 +46,14 @@ class CardImage extends React.Component {
               name="img-selector"
               id="img-selector"
               accept="image/png, image/jpeg"
-              className="action__hiddenField js__profile-upload-btn"
+              className="action__hiddenField"
               ref={this.fileInput}
               onChange={this.handleCardImg}
             />
           </div>
           <div className="profile">
             <div
-              className="profile__preview js__profile-preview"
+              className="profile__preview"
               id="previewImg"
               style={{ backgroundImage: `url(${this.props.img})` }}
             ></div>

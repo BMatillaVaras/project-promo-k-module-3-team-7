@@ -17,7 +17,7 @@ class FormItem extends React.Component {
           {this.props.title}
         </label>
         <input
-          className="fill__input js-fill__input"
+          className="fill__input"
           placeholder={this.props.placeholder}
           id={this.props.name}
           type={this.props.type}

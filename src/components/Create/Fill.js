@@ -33,7 +33,7 @@ class Fill extends React.Component {
         <form
           action=""
           method="post"
-          className={`fill js__display js__displayNone ${this.state.onClick}`}
+          className={`fill js__displayNone ${this.state.onClick}`}
         >
           <FormItem
             name="fullName"

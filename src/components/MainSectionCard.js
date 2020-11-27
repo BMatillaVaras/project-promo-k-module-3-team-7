@@ -9,10 +9,7 @@ class MainSectionCard extends React.Component {
     return (
       <section className="sectionOne">
         <div>
-          <button
-            className="sectionOneBtn js-sectionOneBtn"
-            onClick={this.props.handleReset}
-          >
+          <button className="sectionOneBtn" onClick={this.props.handleReset}>
             <i
               className="fa fa-trash-o sectionOneBtn__logo"
               aria-hidden="true"
@@ -32,7 +29,7 @@ class MainSectionCard extends React.Component {
               </h3>
             </header>
             <div
-              className="profile__image js__profile-image"
+              className="profile__image"
               id="profileImg"
               style={{
                 backgroundImage: `url(${this.props.state.img || CardImg})`,

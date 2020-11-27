@@ -12,9 +12,7 @@ class Palettes extends React.Component {
 
   render() {
     return (
-      <div
-        className={`design__colors js-design__colors ${this.props.divClass}`}
-      >
+      <div className={`design__colors ${this.props.divClass}`}>
         <input
           className={`design__colors--check ${this.props.inputClass}`}
           id={this.props.id}

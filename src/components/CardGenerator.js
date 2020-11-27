@@ -20,6 +20,7 @@ class CardGenerator extends React.Component {
       apiSuccess: false,
       apiCardUrl: "",
       apiError: "",
+      loading: false,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
 
@@ -47,6 +48,9 @@ class CardGenerator extends React.Component {
   };
 
   sendRequest = () => {
+    this.setState({
+      loading: true,
+    });
     const apiCard = {
       name: this.state.fullName,
       job: this.state.job,
@@ -63,6 +67,7 @@ class CardGenerator extends React.Component {
           apiSuccess: true,
           apiCardUrl: response.cardURL,
           apiError: "",
+          loading: false,
         });
         console.log(this.state.apiCardUrl);
       } else {
@@ -104,7 +109,6 @@ class CardGenerator extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <>
         <Header />

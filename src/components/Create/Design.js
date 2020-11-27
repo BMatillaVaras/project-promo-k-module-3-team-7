@@ -29,9 +29,7 @@ class Design extends React.Component {
           title="Diseña"
           handleClick={this.collapseDesign}
         ></Info>
-        <div
-          className={`design js__display js__displayNone ${this.state.onClick}`}
-        >
+        <div className={`design js__displayNone ${this.state.onClick}`}>
           <h3 className="design__title">Colores</h3>
           <div>
             {/* <!--Checkbox1--> */}

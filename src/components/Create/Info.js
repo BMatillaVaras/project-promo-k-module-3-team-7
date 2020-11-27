@@ -10,7 +10,7 @@ class Info extends React.Component {
       >
         <i className={`fa ${this.props.icon} info__icons`}></i>
         <h2 className="info__formTitle">{this.props.title}</h2>
-        <i className="fa fa-angle-up info__rotate js__rotate js__shareRotate"></i>
+        <i className="fa fa-angle-up info__rotate js__rotate"></i>
       </div>
     );
   }
