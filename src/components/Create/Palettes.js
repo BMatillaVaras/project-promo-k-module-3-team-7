@@ -18,7 +18,7 @@ class Palettes extends React.Component {
           id={this.props.id}
           type="radio"
           value={this.props.id}
-          name="palette"
+          name="palettes"
           onChange={this.handleChange}
         />
         <div className={`design__colors--box ${this.props.classColor1}`}></div>

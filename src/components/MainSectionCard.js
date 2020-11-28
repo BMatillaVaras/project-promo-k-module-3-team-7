@@ -16,7 +16,7 @@ class MainSectionCard extends React.Component {
             ></i>
             Reset
           </button>
-          <div className={`sectionOneCard ${this.props.state.palette}`}>
+          <div className={`sectionOneCard ${this.props.state.palettes}`}>
             <header className="sectionOneCard__header js-border">
               <h2
                 className="sectionOneCard__header--name js__name--Card"

@@ -10,6 +10,7 @@ class CardGenerator extends React.Component {
 
     this.state = {
       palette: "",
+      palettes: "",
       fullName: "",
       job: "",
       email: "",
@@ -32,11 +33,25 @@ class CardGenerator extends React.Component {
     this.setState({
       [name]: value,
     });
+    if (value === "paletteBlue") {
+      this.setState({
+        palette: 1,
+      });
+    } else if (value === "paletteRed") {
+      this.setState({
+        palette: 2,
+      });
+    } else if (value === "paletteGrey") {
+      this.setState({
+        palette: 3,
+      });
+    }
   };
 
   handleReset = () => {
     this.setState({
       palette: "",
+      palettes: "",
       fullName: "",
       job: "",
       email: "",
@@ -54,7 +69,7 @@ class CardGenerator extends React.Component {
     const apiCard = {
       name: this.state.fullName,
       job: this.state.job,
-      telephone: this.state.telephone,
+      phone: this.state.telephone,
       email: this.state.email,
       linkedin: this.state.linkedin,
       github: this.state.github,
