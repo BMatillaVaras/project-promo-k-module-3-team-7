@@ -111,7 +111,8 @@ class CardGenerator extends React.Component {
     const savedData = JSON.parse(localStorage.getItem("cardData"));
     if (savedData !== null) {
       this.setState({
-        palettes: savedData.palette,
+        palette: savedData.palette,
+        palettes: savedData.palettes,
         fullName: savedData.fullName,
         job: savedData.job,
         email: savedData.email,
